@@ -53,6 +53,8 @@ def indmil1():
 	print "L'Indipendente delle Orobie"
 	global puntipolitica
 	global elettori
+	global turno
+	turno = turno + 1
 	z = random.randint(1,10)
 	if z == 1:
 		print nome, "all'Incontro con il Partii di Europee-Partito degli Europei"
@@ -133,17 +135,16 @@ def ccomunale():
 	global elettori
 	global nome
 	global presidente
-	turno = turno + 1
 	print "Turno:", turno
 	print "Hai", elettori, "elettori"
 	print "Hai", puntipolitica, "influenza"
-	invio()
 	if puntipolitica > 85 and elettori > 50 and turno%5 == 0:
 		print "Complimenti! Sei stato eletto Consigliere Comunale... Ma adesso dobbiamo arrivare più in altro... Diventare CapoZona della Capitale Bergamo"
 		invio()
 		clear()
 		czonabg()
 	else:
+		invio()
 		clear()
 		ccomunale()
 
