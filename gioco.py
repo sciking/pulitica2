@@ -138,6 +138,27 @@ def ccomunale():
 	print "Turno:", turno
 	print "Hai", elettori, "elettori"
 	print "Hai", puntipolitica, "influenza"
+	if turno%4 == 0:
+		print "Cosa vuoi dichiarare all'Indipendente delle Orobie?"
+		print """1) Siamo a favore delle adozioni gay!
+2) La federazione di oggi è ottima, stop accentramenti
+3) Stop degrado urbano, la precedente amministrazione è indegna
+4) Faremo cose particolari per la città
+5) Continueremo l'opera di Cattaneo in Europa
+6) Espelleremo gli stranieri irregolari
+7) Serve più coesione tra gli stati italici
+8) Voterò contro al Registro Comunale Adozioni Omosessuali"""
+		giornale = int(raw_input(":"))
+		print "L'Indipendente delle Orobie"
+		if giornale == 1:
+		if giornale == 2:
+		if giornale == 3:
+		if giornale == 4:
+		if giornale == 5:
+		if giornale == 6:
+		if giornale == 7:
+		if giornale == 8:
+		raw_input("Premi invio per continuare")
 	if puntipolitica > 85 and elettori > 50 and turno%5 == 0:
 		print "Complimenti! Sei stato eletto Consigliere Comunale... Ma adesso dobbiamo arrivare più in altro... Diventare CapoZona della Capitale Bergamo"
 		invio()
