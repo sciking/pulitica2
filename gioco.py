@@ -139,7 +139,7 @@ def ccomunale():
 	print "Hai", elettori, "elettori"
 	print "Hai", puntipolitica, "influenza"
 	if turno%4 == 0:
-		print "Cosa vuoi dichiarare all'Indipendente delle Orobie?"
+		print "Intervista! Cosa vuoi dichiarare all'Indipendente delle Orobie?"
 		print """1) Siamo a favore delle adozioni gay!
 2) La federazione di oggi è ottima, stop accentramenti
 3) Stop degrado urbano, la precedente amministrazione è indegna
@@ -151,14 +151,48 @@ def ccomunale():
 		giornale = int(raw_input(":"))
 		print "L'Indipendente delle Orobie"
 		if giornale == 1:
+			print nome, "a favore delle adozioni gay, partito perplesso"
+			elettori = elettori + random.randint(-1,5)
+			puntipolitica = puntipolitica - random.randint(1,4)
 		if giornale == 2:
+			print nome, "contento della federazione odierna."
+			elettori = elettori + random.randint(-1,3)
+			puntipolitica = puntipolitica + random.randint(1,6)
 		if giornale == 3:
+			print "Il PIM caravaggese contro il degrado urbano: Forti parole sull'amministrazione precedente."
+			elettori = elettori + random.randint(-2,6)
+			puntipolitica = puntipolitica + random.randint(-1,5)
 		if giornale == 4:
-		if giornale == 5:
+			lm = random.randint(1,3)
+			if lm == 1:
+				print "Piste per pebiottisti a Caravaggio, strana proposta di", nome, "."
+				elettori = elettori + random.randint(-3,5)
+				puntipolitica = puntipolitica + random.randint(0,1)
+			if lm == 2:
+				print "PIM Caravaggese vuole un concorso di bestemmie a Caravaggio. Elettori sbigottiti"
+				elettori = elettori + random.randint(-4,1)
+				puntipolitica = puntipolitica + random.randint(-1,1)
+			if lm == 3:
+				print "Lombardo unica lingua ufficiale di Careàs, proposta di", nome, "."
+				elettori = elettori + random.randint(-2,6)
+				puntipolitica = puntipolitica + random.randint(-2,5)
 		if giornale == 6:
+			print nome, "chiarissimo: Immigrati foeura da le balle"
+			elettori = elettori + random.randint(-1,3)
+			puntipolitica = puntipolitica + random.randint(1,3)
 		if giornale == 7:
+			print "Candidato a Caravaggio dei Giovani Indipendenti vuole l'Italia coesa. Costava sbraita 'sta mia a fà el cojon'"
+			elettori = elettori + random.randint(-4,3)
+			puntipolitica = puntipolitica + random.randint(-5,3)
+		if giornale == 5:
+			print nome, "si schiera per l'unità europea: 'Noi come Carlo Cattaneo, sempre europeisti saremo'"
+			elettori = elettori + random.randint(-1,3)
+			puntipolitica = puntipolitica + random.randint(-2,8)
 		if giornale == 8:
-		raw_input("Premi invio per continuare")
+			print "Il PIM Caravaggio contro alle adozioni gay nel comune"
+			elettori = elettori + random.randint(-3,4)
+			puntipolitica = puntipolitica + random.randint(1,6)
+
 	if puntipolitica > 85 and elettori > 50 and turno%5 == 0:
 		print "Complimenti! Sei stato eletto Consigliere Comunale... Ma adesso dobbiamo arrivare più in altro... Diventare CapoZona della Capitale Bergamo"
 		invio()
