@@ -211,7 +211,7 @@ def ccomunale():
 			je = random.randint(1,3)
 			if je == 1:
 				print "Il confronto lascia indifferente la popolazione"
-				puntipolitca = puntipolitca + 3
+				puntipolitica = puntipolitica + 3
 			if je == 2:
 				print "Colpisci i cuori dei cittadini, ottimo!"
 				elettori = elettori + 4
@@ -239,7 +239,7 @@ def ccomunale():
 			je = random.randint(1,3)
 			if je == 1:
 				print "Parli a 'Mediolanum TV', diffondi l'idea del partito ma passi subito a parlare di calcio a 5"
-				puntipolitca = puntipolitca + 1
+				puntipolitica = puntipolitica + 1
 				elettori = elettori + random.randint(-2,2)
 			if je == 2:
 				print "Parli a 'Sodoku' e convinci molti indecisi a votare il PIM"
