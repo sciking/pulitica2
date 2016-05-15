@@ -111,7 +111,7 @@ def indmil1():
 			puntipolitica = int(puntipolitica*1.5)
 		else:
 			print nome, "contro ai candidati neofascisti nelle liste amiche del PIM: Elettori felici"
-			puntipolitica = puntipolitica + random.randint(-4,6)
+			puntipolitica = puntipolitica + random.randint(-3,6)
 			elettori = elettori + random.randint(1,5)
 	elif z == 9:
 		print nome, "chiede spazio per la Scienza a Caravaggio!"
@@ -125,7 +125,7 @@ def indmil1():
 		else:
 			print nome, "dice che la soluzione ai problemi è incendiare i campi rom: Partito perplesso"
 			puntipolitica = puntipolitica + random.randint(-4,0)
-			elettori = elettori + random.randint(-1,5)
+			elettori = elettori + random.randint(-1,6)
 def ccomunale():
 
 
@@ -170,7 +170,7 @@ def ccomunale():
 				puntipolitica = puntipolitica + random.randint(0,1)
 			if lm == 2:
 				print "PIM Caravaggese vuole un concorso di bestemmie a Caravaggio. Elettori sbigottiti"
-				elettori = elettori + random.randint(-4,1)
+				elettori = elettori + random.randint(-3,1)
 				puntipolitica = puntipolitica + random.randint(-1,1)
 			if lm == 3:
 				print "Lombardo unica lingua ufficiale di Careàs, proposta di", nome, "."
@@ -186,11 +186,11 @@ def ccomunale():
 			puntipolitica = puntipolitica + random.randint(-5,3)
 		if giornale == 5:
 			print nome, "si schiera per l'unità europea: 'Noi come Carlo Cattaneo, sempre europeisti saremo'"
-			elettori = elettori + random.randint(-1,3)
+			elettori = elettori + random.randint(-1,5)
 			puntipolitica = puntipolitica + random.randint(-2,8)
 		if giornale == 8:
 			print "Il PIM Caravaggio contro alle adozioni gay nel comune"
-			elettori = elettori + random.randint(-3,4)
+			elettori = elettori + random.randint(-3,5)
 			puntipolitica = puntipolitica + random.randint(1,6)
 	if turno%4 != 0:
 		print "Cosa vuoi fare?"
@@ -201,11 +201,12 @@ def ccomunale():
 5) Manifestazione dei Giovani Europei
 6) Gay Pride
 7) Intervista in TV
-8) Partecipa a "Radio Lombardia Internazzional" """
+8) Partecipa a "Radio Lombardia Internazzional"
+9) Manifestazione degli Alpini a Legnano """
 		eventi = int(raw_input(":"))
 		if eventi == 1:
 			print "Fai un aperitivo con i candidati del PIM e incontri i cittadini di Caravaggio e Treviglio"
-			elettori = elettori + 2
+			elettori = elettori + 3
 			puntipolitica = puntipolitica + random.randint(-2,1)
 		if eventi == 2:
 			je = random.randint(1,3)
@@ -214,7 +215,7 @@ def ccomunale():
 				puntipolitica = puntipolitica + 3
 			if je == 2:
 				print "Colpisci i cuori dei cittadini, ottimo!"
-				elettori = elettori + 4
+				elettori = elettori + 6
 				puntipolitica = puntipolitica + random.randint(0,3)
 			if je == 3:
 				print "Male male male... Gli avversari ti battono nettamente"
@@ -233,14 +234,14 @@ def ccomunale():
 			puntipolitica = puntipolitica + random.randint(0,5)
 		if eventi == 6:
 			print "Partecipi al Gay Pride di Cremona, elettorato gay alle stelle"
-			elettori = elettori + random.randint(-7,10)
+			elettori = elettori + random.randint(-6,10)
 			puntipolitica = puntipolitica + random.randint(-1,6)	
 		if eventi == 7:
 			je = random.randint(1,3)
 			if je == 1:
 				print "Parli a 'Mediolanum TV', diffondi l'idea del partito ma passi subito a parlare di calcio a 5"
 				puntipolitica = puntipolitica + 1
-				elettori = elettori + random.randint(-2,2)
+				elettori = elettori + random.randint(-2,3)
 			if je == 2:
 				print "Parli a 'Sodoku' e convinci molti indecisi a votare il PIM"
 				elettori = elettori + 5
@@ -252,10 +253,14 @@ def ccomunale():
 		if eventi == 8:
 			print "Parli a 'Radio Lombardia Internazzional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
 			elettori = elettori + 1
-			puntipolitica = puntipolitica + random.randint(4,12)		
+			puntipolitica = puntipolitica + random.randint(4,12)
+		if eventi == 9:
+			print "Prendi la ciucca e fai il simpaticone ricordando la tua leva nei vigili. Elettori divertiti, PIM meno. Molto meno"
+			elettori = elettori + random.randint(2,8)
+			puntipolitica = puntipolitica - random.randint(-2,5)		
 
 
-	if puntipolitica > 85 and elettori > 50 and turno%5 == 0:
+	if puntipolitica > 85 and elettori > 45 and turno%5 == 0:
 		print "Complimenti! Sei stato eletto Consigliere Comunale... Ma adesso dobbiamo arrivare più in altro... Diventare CapoZona della Capitale Bergamo"
 		invio()
 		clear()
