@@ -262,6 +262,9 @@ def ccomunale():
 
 	if puntipolitica > 85 and elettori > 45 and turno%5 == 0:
 		print "Complimenti! Sei stato eletto Consigliere Comunale... Ma adesso dobbiamo arrivare più in altro... Diventare CapoZona della Capitale Bergamo"
+		print"""
+Il CapoZona viene eletto semplicemente barrando il simbolo del PIM e delle Liste Alleate, dunque non dovrai fare molta propaganda come manifesti e santini.
+Le elezioni si tengono ogni 6 turni e dovrai avere almeno 250 punti politica e 150 elettori. Eh si, non sono molto grosse le zone di Bergamo."""
 		invio()
 		clear()
 		czonabg()
@@ -350,6 +353,7 @@ def indmil2():
 			print nome, "canta l'Inno d'Italia alla partita: Partito perplesso"
 			puntipolitica = puntipolitica + random.randint(-5,0)
 			elettori = elettori + random.randint(-4,4)
+	#czonabg()
 def czonabg():
 	indmil2()
 	global turno
@@ -361,7 +365,7 @@ def czonabg():
 	print "Hai", elettori, "elettori"
 	print "Hai", puntipolitica, "influenza"
 	if turno%4 == 0:
-		print "Intervista! Cosa vuoi dichiarare all'Indipendente delle Orobie?"
+		print "Intervista! Cosa vuoi dichiarare all'Indipendente di Bergamo?"
 		print """1) Creeremo un registro adozioni gay di Zona!
 2) Costava miglior candidato della storia lombarda, votatelo!
 3) Porteremo il bergamasco nelle scuole parificandolo all'italiano toscano
@@ -416,80 +420,84 @@ def czonabg():
 			puntipolitica = puntipolitica + random.randint(2,10)
 	if turno%4 != 0:
 		print "Cosa vuoi fare?"
-		print """1) Aperitivo con i candidati
+		print """1) Cena con la cittadinanza
 2) Confronto pubblico tra candidati
-3) Viaggio a Bergamo per incontrare il Segretario Cittadino
-4) Corso di lingua lombarda
-5) Manifestazione dei Giovani Europei
-6) Gay Pride
-7) Intervista in TV
+3) Incontro tra candidati PIM della Lombardia Orientale
+4) Pellegrinaggio a Legnano
+5) Incontro con gli Europarlamentari PIM
+6) Manifestazione con i commercianti
+7) Diretta TV
 8) Partecipa a "Radio Lombardia Internazzional"
-9) Manifestazione degli Alpini a Legnano """
+9) Incontro con gli scolari della zona """
 		eventi = int(raw_input(":"))
 		if eventi == 1:
-			print "Fai un aperitivo con i candidati del PIM e incontri i cittadini di Caravaggio e Treviglio"
-			elettori = elettori + 3
-			puntipolitica = puntipolitica + random.randint(-2,1)
+			print "Organizzi una cena per ascoltare i bisogni della popolazione"
+			elettori = elettori + 8
+			puntipolitica = puntipolitica + random.randint(-6,3)
 		if eventi == 2:
 			je = random.randint(1,3)
 			if je == 1:
 				print "Il confronto lascia indifferente la popolazione"
-				puntipolitica = puntipolitica + 3
+				puntipolitica = puntipolitica + 7
 			if je == 2:
 				print "Colpisci i cuori dei cittadini, ottimo!"
-				elettori = elettori + 6
-				puntipolitica = puntipolitica + random.randint(0,3)
+				elettori = elettori + 12
+				puntipolitica = puntipolitica + random.randint(1,6)
 			if je == 3:
 				print "Male male male... Gli avversari ti battono nettamente"
-				elettori = elettori + random.randint(-3,2)
-				puntipolitica = puntipolitica + random.randint(-3,1)
+				elettori = elettori + random.randint(-6,3)
+				puntipolitica = puntipolitica + random.randint(-6,2)
 		if eventi == 3:
-			print "Incontri a Bergamo il Segretario della Città Autonoma e ti 'benedice'"
-			puntipolitica = puntipolitica + 5
+			print "Incontri a Bergamo i candidati del resto della Lombardia orientale"
+			puntipolitica = puntipolitica + 8
 		if eventi == 4:
-			print "Prendi parte ad un corso di lingua lombarda: \n Importantissimo tutelare la nostra lingua, dici"
-			elettori = elettori + random.randint(1,7)
-			puntipolitica = puntipolitica + random.randint(-2,4)	
+			print "Lasci per un giorno la politica e accompagni un gruppo della parrocchia a Legnano"
+			elettori = elettori + random.randint(3,9)
+			puntipolitica = puntipolitica + random.randint(-4,2)	
 		if eventi == 5:
-			print "Vai a manifestare coi Giovani Europei per l'Europa confederale"
-			elettori = elettori + random.randint(-2,6)
-			puntipolitica = puntipolitica + random.randint(0,5)
+			print "Incontri gli europarlamentari del PIM insieme ad altri giovani candidati"
+			elettori = elettori + random.randint(-3,8)
+			puntipolitica = puntipolitica + random.randint(2,9)
 		if eventi == 6:
-			print "Partecipi al Gay Pride di Cremona, elettorato gay alle stelle"
-			elettori = elettori + random.randint(-6,10)
-			puntipolitica = puntipolitica + random.randint(-1,6)	
+			print "Manifesti con i commercianti bergamaschi: Elettorato locale alle stelle"
+			elettori = elettori + random.randint(-8,12)
+			puntipolitica = puntipolitica + random.randint(-2,8)	
 		if eventi == 7:
 			je = random.randint(1,3)
 			if je == 1:
-				print "Parli a 'Mediolanum TV', diffondi l'idea del partito ma passi subito a parlare di calcio a 5"
-				puntipolitica = puntipolitica + 1
-				elettori = elettori + random.randint(-2,3)
+				print "Parli a 'TeleBergamo', diffondi l'idea del partito ma divaghi subito"
+				puntipolitica = puntipolitica + 2
+				elettori = elettori + random.randint(-4,4)
 			if je == 2:
-				print "Parli a 'Sodoku' e convinci molti indecisi a votare il PIM"
-				elettori = elettori + 5
-				puntipolitica = puntipolitica + random.randint(0,5)
+				print "Parli a 'Pomeriggio Milano' e convinci molti indecisi a votare il PIM"
+				elettori = elettori + 10
+				puntipolitica = puntipolitica + random.randint(1,6)
 			if je == 3:
-				print "Sindaco liberale dimostra che sei incompetente in politica federale"
-				elettori = elettori + random.randint(-6,3)
-				puntipolitica = puntipolitica + random.randint(-4,3)	
+				print "Sindaco liberale riesce a far propaganda ai tuoi danni"
+				elettori = elettori + random.randint(-8,3)
+				puntipolitica = puntipolitica + random.randint(-6,5)	
 		if eventi == 8:
 			print "Parli a 'Radio Lombardia Internazzional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
-			elettori = elettori + 1
-			puntipolitica = puntipolitica + random.randint(4,12)
+			elettori = elettori + 4
+			puntipolitica = puntipolitica + random.randint(8,14)
 		if eventi == 9:
-			print "Prendi la ciucca e fai il simpaticone ricordando la tua leva nei vigili. Elettori divertiti, PIM meno. Molto meno"
-			elettori = elettori + random.randint(2,8)
-			puntipolitica = puntipolitica - random.randint(-2,5)		
+			print "Incontri gli alunni della zona e ascolti i loro problemi"
+			elettori = elettori + random.randint(-4,9)
+			puntipolitica = puntipolitica - random.randint(-4,10)		
 
 
-	if puntipolitica > 85 and elettori > 45 and turno%5 == 0:
-		print "Complimenti! Sei stato eletto Consigliere Comunale... Ma adesso dobbiamo arrivare più in altro... Diventare CapoZona della Capitale Bergamo"
+	if puntipolitica > 250 and elettori > 150 and turno%6 == 0:
+		print "Complimenti! Sei stato eletto CapoZona... Ma adesso dobbiamo arrivare più in altro..."
+		print"""
+Caro Candidato, sono il Preisdente del Partito. Nella Bergamasca abbiamo tanti giovani abili, e tu sei il migliore. Ma nell'alta Insubria, zona tradizionalmente
+liberale, arranchiamo molto. Pertanto non correrai al Consiglio Autonomo di Bergamo, ma proverai a diventare sindaco della capitale dell'Alta Insubria: Como.
+Finalmente potrai anche fare propaganda elettorale spendendo denaro, il Partito di darà 1500Å per turno. Divertiti. Le elezioni saranno ogni 7 turni e dovrai avere almeno 800 punti politica e 600 elettori."""
 		invio()
 		clear()
 		czonabg()
 	else:
 		invio()
 		clear()
-		ccomunale()
+		czonabg()
 
 introd()
