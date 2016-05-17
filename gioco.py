@@ -87,7 +87,7 @@ def indmil1():
 			elettori = elettori + 3
 	elif z == 4:
 		if turno%4 == 0:
-			print "Candidato sindaco", nomi[random.randint(0,165)], cognomi[random.randint(0,165)]," del PIM alla processione al Santuario"
+			print "Candidato sindaco", nomi[random.randint(0,165)], cognomi[random.randint(0,165)],"del PIM alla processione al Santuario"
 			puntipolitica = puntipolitica + random.randint(-3,5)
 			elettori = elettori + random.randint(-1,5)
 		else:
@@ -157,7 +157,8 @@ def ccomunale():
 5) Continueremo l'opera di Cattaneo in Europa
 6) Espelleremo gli stranieri irregolari
 7) Serve più coesione tra gli stati italici
-8) Voterò contro al Registro Comunale Adozioni Omosessuali"""
+8) Voterò contro al Registro Comunale Adozioni Omosessuali
+9) Più potere per Insubria ed Orobia: Cantoni troppo potenti"""
 		giornale = int(raw_input(":"))
 		print "L'Indipendente delle Orobie"
 		if giornale == 1:
@@ -202,6 +203,10 @@ def ccomunale():
 			print "Il PIM Caravaggio contro alle adozioni gay nel comune"
 			elettori = elettori + random.randint(-3,5)
 			puntipolitica = puntipolitica + random.randint(1,6)
+		if giornale == 9:
+			print nome,"vuole più potere per gli Stati e meno per i Cantoni"
+			elettori = elettori + random.randint(-2,4)
+			puntipolitica = puntipolitica + random.randint(-1,3)
 	if turno%4 != 0:
 		print "Cosa vuoi fare?"
 		print """1) Aperitivo con i candidati
@@ -267,14 +272,19 @@ def ccomunale():
 		if eventi == 9:
 			print "Prendi la ciucca e fai il simpaticone ricordando la tua leva nei vigili. Elettori divertiti, PIM meno. Molto meno"
 			elettori = elettori + random.randint(2,8)
-			puntipolitica = puntipolitica - random.randint(-2,5)		
+			puntipolitica = puntipolitica - random.randint(-2,5)	
+		if eventi == 44:
+			#variabili di debug
+			puntipolitica = input("Puntipolitica:")
+			elettori = input("Elettori:")
+			turno = input("Turno:")
 
 
 	if puntipolitica > 85 and elettori > 45 and turno%5 == 0:
 		print "Complimenti! Sei stato eletto Consigliere Comunale... Ma adesso dobbiamo arrivare più in altro... Diventare CapoZona della Capitale Bergamo"
 		print"""
 Il CapoZona viene eletto semplicemente barrando il simbolo del PIM e delle Liste Alleate, dunque non dovrai fare molta propaganda come manifesti e santini.
-Le elezioni si tengono ogni 6 turni e dovrai avere almeno 250 punti politica e 150 elettori. Eh si, non sono molto grosse le zone di Bergamo."""
+Le elezioni si tengono ogni 6 turni e dovrai avere almeno 250 punti politica e 250 elettori. Eh si, non sono molto grosse le zone di Bergamo."""
 		invio()
 		clear()
 		czonabg()
@@ -291,7 +301,7 @@ def indmil2():
 	global elettori
 	global turno
 	turno = turno + 1
-	z = random.randint(1,10)
+	z = random.randint(1,12)
 	if z == 1:
 		print "Bollettino del III Distretto di Bergamo"
 		print nome, "incontra gli altri candidati di Zona del PIM"
@@ -363,6 +373,33 @@ def indmil2():
 			print nome, "canta l'Inno d'Italia alla partita: Partito perplesso"
 			puntipolitica = puntipolitica + random.randint(-5,0)
 			elettori = elettori + random.randint(-4,4)
+	elif z == 11:
+		ke = random.randint(1,3)
+		if ke == 1:
+			print nome, "all'attacco del candidato di sinistra: \n'Scelto dalle sinistre romane, non credo che pensa ai bergamaschi manco se lo vedo"
+			puntipolitica = puntipolitica + random.randint(-1,8)
+			elettori = elettori + random.randint(-2,8)
+		if ke == 2:
+			print "Ma la sinistra sa solo provocare? \nLoro candidato passa il tempo ad attaccare PIM e Liberali... Mancanza cronica d'argomenti"
+			puntipolitica = puntipolitica + random.randint(0,2)
+			elettori = elettori + random.randint(1,4)
+		if ke == 3:
+			print nome, "Al LUG di Caravaggio, elettorato hacker alle stelle"
+			elettori = elettori + random.randint(-2,5)
+	elif z == 12:
+		ke = random.randint(1,3)
+		if ke == 1:
+			print nome, "incontra la cittadinanza con la sua ragazza, che piace molto al popolo"
+			puntipolitica = puntipolitica + random.randint(-2,4)
+			elettori = elettori + random.randint(1,6)
+		if ke == 2:
+			print "Candidato PIM non raccoglie la cacca del cane: Multato dalla Polizia Civile di Bergamo"
+			puntipolitica = puntipolitica + random.randint(-2,2)
+			elettori = elettori + random.randint(-2,5)
+		if ke == 3:
+			print nome, "torna alle origini: Discorso in sezione PIM di Caravaggio. Tutto il lombardo"
+			elettori = elettori + random.randint(1,7)
+			puntipolitica = puntipolitica + random.randint(2,6)
 	#czonabg()
 def czonabg():
 	indmil2()
@@ -496,7 +533,7 @@ def czonabg():
 			puntipolitica = puntipolitica - random.randint(-4,10)		
 
 
-	if puntipolitica > 250 and elettori > 150 and turno%6 == 0:
+	if puntipolitica > 250 and elettori > 250 and turno%6 == 0:
 		print "Complimenti! Sei stato eletto CapoZona... Ma adesso dobbiamo arrivare più in altro..."
 		print"""
 Caro Candidato, sono il Preisdente del Partito. Nella Bergamasca abbiamo tanti giovani abili, e tu sei il migliore. Ma nell'alta Insubria, zona tradizionalmente
