@@ -171,7 +171,12 @@ def ccomunale():
 7) Serve più coesione tra gli stati italici
 8) Voterò contro al Registro Comunale Adozioni Omosessuali
 9) Più potere per Insubria ed Orobia: Cantoni troppo potenti"""
-		giornale = int(raw_input(":"))
+		while True:
+			try:
+				giornale = int(raw_input(":"))
+				break
+			except ValueError:
+				print "Inserisci un numero!"
 		print "L'Indipendente delle Orobie"
 		if giornale == 1:
 			print nome, "a favore delle adozioni gay, partito perplesso"
@@ -448,7 +453,12 @@ def czonabg():
 6) Ammetteremo più stranieri e senza richiedere permessi
 7) Serve più coesione tra gli stati europei
 8) Candidati di certe liste amiche impresentabili, non li sento miei"""
-		giornale = int(raw_input(":"))
+		while True:
+			try:
+				giornale = int(raw_input(":"))
+				break
+			except ValueError:
+				print "Inserisci un numero!"
 		print "L'Indipendente di Bergamo"
 		if giornale == 1:
 			print nome, "a favore delle adozioni gay, partito perplesso"
@@ -733,7 +743,12 @@ def sindaco(): #che sarebbe sindaCO, non sindaco :D
 7) Darò il potere a tutti gli assessori di far decreti"
 8) Faremo risoluzione contro l'unità italiana
 9) Il lombardo sarà unica lingua di Como"""
-		giornale = int(raw_input(":"))
+		while True:
+			try:
+				giornale = int(raw_input(":"))
+				break
+			except ValueError:
+				print "Inserisci un numero!"
 		print "L'Indipendente di Como"
 		if giornale == 2:
 			print nome, "vuole Como al Senato Insubre!"
@@ -1036,7 +1051,12 @@ def presidentecantonale():
 7) Farò una riforma vaccinale importante
 8) Ferrovia veloce Novara-Milano-Bergamo obiettivo primario
 9) Programmazione in inglese materia obbligatoria nelle nostre scuole, Insubria volente o nolente"""
-		giornale = int(raw_input(":"))
+		while True:
+			try:
+				giornale = int(raw_input(":"))
+				break
+			except ValueError:
+				print "Inserisci un numero!"
 		print "L'Indipendente di Novara"
 		if giornale == 2:
 			print nome, "schiavo di Milano! Si dimetterebbe su semplice richiesta del governo centrale!"
@@ -1333,7 +1353,12 @@ def premil():
 7) Avremo gli ospedali migliori d'Europa
 8) Binasco dovrebbe tornare sotto Pavia
 9) Nella mia città autonoma vedo le adozioni gay"""
-		giornale = int(raw_input(":"))
+		while True:
+			try:
+				giornale = int(raw_input(":"))
+				break
+			except ValueError:
+				print "Inserisci un numero!"
 		print "L'Indipendente Meneghino"
 		if giornale == 2:
 			print nome, "vuole lo sport a Milano, però costerà molto!"
