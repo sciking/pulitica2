@@ -228,9 +228,14 @@ def ccomunale():
 5) Manifestazione dei Giovani Europei
 6) Gay Pride
 7) Intervista in TV
-8) Partecipa a "Radio Lombardia Internazzional"
+8) Partecipa a "Radio Lombardia Internazional"
 9) Manifestazione degli Alpini a Legnano """
-		eventi = int(raw_input(":"))
+		try:
+			eventi = int(raw_input(":"))
+		except:
+			print "ERRORE, inserisci un numero valido"
+			eventi = int(raw_input(":"))
+		
 		if eventi == 1:
 			print "Fai un aperitivo con i candidati del PIM e incontri i cittadini di Caravaggio e Treviglio"
 			elettori = elettori + 3
@@ -278,7 +283,7 @@ def ccomunale():
 				elettori = elettori + random.randint(-6,3)
 				puntipolitica = puntipolitica + random.randint(-4,3)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazzional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
 			elettori = elettori + 1
 			puntipolitica = puntipolitica + random.randint(4,12)
 		if eventi == 9:
@@ -496,9 +501,13 @@ def czonabg():
 5) Incontro con gli Europarlamentari PIM
 6) Manifestazione con i commercianti
 7) Diretta TV
-8) Partecipa a "Radio Lombardia Internazzional"
+8) Partecipa a "Radio Lombardia Internazional"
 9) Incontro con gli scolari della zona """
-		eventi = int(raw_input(":"))
+		try:
+			eventi = int(raw_input(":"))
+		except:
+			print "ERRORE, inserisci un numero valido"
+			eventi = int(raw_input(":"))
 		if eventi == 1:
 			print "Organizzi una cena per ascoltare i bisogni della popolazione"
 			elettori = elettori + 8
@@ -546,7 +555,7 @@ def czonabg():
 				elettori = elettori + random.randint(-8,3)
 				puntipolitica = puntipolitica + random.randint(-6,5)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazzional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
 			elettori = elettori + 4
 			puntipolitica = puntipolitica + random.randint(8,14)
 		if eventi == 9:
@@ -781,9 +790,13 @@ def sindaco(): #che sarebbe sindaCO, non sindaco :D
 5) Incontro con i Senatori PIM
 6) Manifestazione con i cittadini di periferia
 7) Diretta TV
-8) Partecipa a "Radio Lombardia Internazzional"
+8) Partecipa a "Radio Lombardia Internazional"
 9) Stampa manifesti"""
-		eventi = int(raw_input(":"))
+		try:
+			eventi = int(raw_input(":"))
+		except:
+			print "ERRORE, inserisci un numero valido"
+			eventi = int(raw_input(":"))
 		if eventi == 1:
 			print "Organizzi una serata per ascoltare i bisogni della popolazione"
 			elettori = elettori + 12
@@ -831,7 +844,7 @@ def sindaco(): #che sarebbe sindaCO, non sindaco :D
 				elettori = elettori + random.randint(-12,5)
 				puntipolitica = puntipolitica + random.randint(-8,4)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazzional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
 			elettori = elettori + 10
 			puntipolitica = puntipolitica + random.randint(10,18)
 		if eventi == 9:
@@ -887,9 +900,13 @@ def indmil4():
 			print "La lista avversaria 'Novara Sociale' non parteciperà per problemi legali del candidato"
 			elettori = elettori + 10
 	elif z == 4:
-		print  nome, "contro la legge d'autonomia odierna: Daremo autonomia ai comuni"
-		puntipolitica = puntipolitica + random.randint(4,12)
-		elettori = elettori + random.randint(-3,20)
+		if turno%2 == 0:
+			print  nome, "contro la legge d'autonomia odierna: Daremo autonomia ai comuni"
+			puntipolitica = puntipolitica + random.randint(4,12)
+			elettori = elettori + random.randint(-3,20)
+		else:
+			print nome, "simpaticamente contro a chi fa togliere le scarpe agli ospiti:"
+			print '"Li rispedirò a casa loro in Austria", dice ridendo'
 	elif z == 5:
 		if turno%2==0:
 			print nome,"dichiara 'Novara è lombarda, sempre lo è stata e sempre lo sarà!"
@@ -1076,9 +1093,13 @@ def presidentecantonale():
 5) Incontro con i ragazzi di "Podèmm"
 6) Manifestazione con i giovani del PIM
 7) Diretta TV
-8) Partecipa a "Radio Lombardia Internazzional"
+8) Partecipa a "Radio Lombardia Internazional"
 9) Stampa manifesti"""
-		eventi = int(raw_input(":"))
+		try:
+			eventi = int(raw_input(":"))
+		except:
+			print "ERRORE, inserisci un numero valido"
+			eventi = int(raw_input(":"))
 		if eventi == 1:
 			print "Organizzi una serata per ascoltare i bisogni della popolazione"
 			elettori = elettori + 20
@@ -1126,7 +1147,7 @@ def presidentecantonale():
 				elettori = elettori + random.randint(-12,5)
 				puntipolitica = puntipolitica + random.randint(-8,4)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazzional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
 			elettori = elettori + 20
 			puntipolitica = puntipolitica + random.randint(10,18)
 		if eventi == 9:
@@ -1373,9 +1394,13 @@ def premil():
 5) Incontro con i ragazzi di "Podèmm"
 6) Manifestazione con i giovani del PIM
 7) Diretta TV
-8) Partecipa a "Radio Lombardia Internazzional"
+8) Partecipa a "Radio Lombardia Internazional"
 9) Stampa manifesti"""
-		eventi = int(raw_input(":"))
+		try:
+			eventi = int(raw_input(":"))
+		except:
+			print "ERRORE, inserisci un numero valido"
+			eventi = int(raw_input(":"))
 		if eventi == 1:
 			print "Organizzi una serata per ascoltare i bisogni della popolazione"
 			elettori = elettori + 20
@@ -1423,7 +1448,7 @@ def premil():
 				elettori = elettori + random.randint(-12,5)
 				puntipolitica = puntipolitica + random.randint(-8,4)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazzional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
 			elettori = elettori + 20
 			puntipolitica = puntipolitica + random.randint(10,18)
 		if eventi == 9:
