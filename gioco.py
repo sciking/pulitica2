@@ -288,9 +288,12 @@ def ccomunale():
 				elettori = elettori + random.randint(-6,3)
 				puntipolitica = puntipolitica + random.randint(-4,3)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
-			elettori = elettori + 1
-			puntipolitica = puntipolitica + random.randint(4,12)
+			if random.randint(1,5) > 2:
+				print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+				elettori = elettori + 1
+				puntipolitica = puntipolitica + random.randint(4,12)
+			else:
+				print("Black out in diretta, nessuno può sentire la tua intervista")
 		if eventi == 9:
 			print "Prendi la ciucca e fai il simpaticone ricordando la tua leva nei vigili. Elettori divertiti, PIM meno. Molto meno"
 			elettori = elettori + random.randint(2,8)
@@ -347,7 +350,7 @@ def indmil2():
 			puntipolitica = puntipolitica + 7
 			elettori = elettori - 5
 		else:
-			print "La lista avversaria 'Bergamo Democratica - Italia Centralista' non parteciperà per problemi legali del candidato"
+			print "La lista avversaria 'Bergamo Democratica - Lombardia Centralista' non parteciperà per problemi legali del candidato"
 			elettori = elettori + 6
 	elif z == 4:
 		if turno%2 == 0:
@@ -408,7 +411,7 @@ def indmil2():
 	elif z == 11:
 		ke = random.randint(1,3)
 		if ke == 1:
-			print nome, "all'attacco del candidato di sinistra: \n'Scelto dalle sinistre romane, non credo che pensa ai bergamaschi manco se lo vedo"
+			print nome, "all'attacco del candidato di sinistra: \n'Scelto dalle sinistre milanesi, non credo che pensa ai bergamaschi manco se lo vedo"
 			puntipolitica = puntipolitica + random.randint(-1,8)
 			elettori = elettori + random.randint(-2,8)
 		if ke == 2:
@@ -859,9 +862,13 @@ def sindaco(): #che sarebbe sindaCO, non sindaco :D
 				elettori = elettori + random.randint(-12,5)
 				puntipolitica = puntipolitica + random.randint(-8,4)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
-			elettori = elettori + 10
-			puntipolitica = puntipolitica + random.randint(10,18)
+			if random.randint(1,6) > 2:
+				print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+				elettori = elettori + 10
+				puntipolitica = puntipolitica + random.randint(10,18)
+			else:
+				print "Le domande poste sono molto scomode e non sai rispondere"
+				elettori = elettori - 8
 		if eventi == 9:
 			print "Stampi manifesti"
 			elettori = elettori + random.randint(10,50)
@@ -1473,9 +1480,14 @@ def premil():
 				elettori = elettori + random.randint(-12,5)
 				puntipolitica = puntipolitica + random.randint(-8,4)	
 		if eventi == 8:
-			print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
-			elettori = elettori + 20
-			puntipolitica = puntipolitica + random.randint(10,18)
+			if random(1,5) < 3:
+				print "Parli a 'Radio Lombardia Internazional' in lombardo e inglese. \n Ti ascoltano in tutta Europa e ottieni una medaglia del Partito Indipendente d'Europa"	
+				elettori = elettori + 20
+				puntipolitica = puntipolitica + random.randint(10,18)
+			else:
+				print("Pessima figura a Radio Lombardia Internazional per", nome)
+				elettori = elettori - 15 
+				puntipolitica = puntipolitica - random.randint(10,18)			
 		if eventi == 9:
 			print "Stampi manifesti"
 			elettori = elettori + random.randint(30,100)
